@@ -94,7 +94,7 @@ const createSlider = () => {
             changeSlide(slideIndex);
         }, duration);
     } else {
-        alert("Duration can't be a negative number");
+        alert("Duration can't input a negative number");
         document.getElementById('duration').value = "";
     }
 }
@@ -129,7 +129,7 @@ searchBtn.addEventListener('click', function() {
     document.querySelector('.main').style.display = 'none';
     clearInterval(timer);
     const search = document.getElementById('search');
-    if (search.value == '' || search.value == ' ') {
+    if (search.value === '' || search.value === ' ') {
         errorTogglePopUp();
         gallery.innerHTML = '';
     } else {
@@ -139,7 +139,7 @@ searchBtn.addEventListener('click', function() {
 })
 
 sliderBtn.addEventListener('click', function() {
-    createSlider()
+    createSlider();
 })
 
 //enter keypress for image search
@@ -156,7 +156,7 @@ const searchKeyPress = (event) => {
 //enter keypress for duration
 const durationKeyPress = (event) => {
     if (event.keyCode === 13) {
-        createSlider()
+        createSlider();
     }
 }
 
@@ -170,7 +170,7 @@ const toggleSpinner = () => {
 
 //function for pop up when user's input can not match with the image's database.
 const errorTogglePopUp = () => {
-    document.getElementById("popup-2").classList.toggle("active");
+    document.getElementById("error-popup").classList.toggle("active");
     const errorInfo = `
       <h1 class="error-message">Sorry, Image Not Found!</h1>
       `;

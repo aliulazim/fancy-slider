@@ -129,11 +129,6 @@ p {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.sorry-img {
-    margin-left: 25%;
-    width: 50%;
-}
-
 .error-message {
     margin-top: 2%;
     text-align: center;
